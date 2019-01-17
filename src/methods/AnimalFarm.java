@@ -15,11 +15,41 @@ public class AnimalFarm {
 	AnimalFarm() {
 		/*
 		 * 1. Ask the user which animal they want, then play the sound of that animal.
-		 */
+		 */ 
+		String grinch = JOptionPane.showInputDialog(null,"What farm animal do you want? tell me, or the Grinch will get you++" );
 		
 		/* 2. Make it so that the user can keep entering new animals. */
+		if (grinch.equals("cow")) {
+			playMoo();
+		}
+		if (grinch.equals("duck")) {
+			playQuack();
+		}	
+		if (grinch.equals("dog")) {
+			playWoof();
+		}
+		if (grinch.equals("cat")) {
+			playMeow();
+		}
+		if (grinch.equals("llama")) {
+			playLlama();
+		}
+		
+		
+		
+		
+		
+	
 	}
-
+	void playMeow() {
+		playNoise(meowFile);
+	}
+	void playLlama() {
+		playNoise(llamaFile);
+	}
+	
+	
+	
 	void playMoo() {
 		playNoise(mooFile);
 	}
